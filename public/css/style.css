@@ -2,3 +2,15 @@
 	padding: 0px;
 	margin: 0px;
 }
+
+.navbar-fixed-top{
+	background-color: transparent !important;
+	color: #fff;
+	border: 0px solid transparent;
+}
+
+.navbar-fixed-top.scrolled {
+  background-color: #fff !important;
+  color: #efefef;
+  transition: background-color 200ms linear;
+}
