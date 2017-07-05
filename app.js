@@ -1,7 +1,18 @@
 const Hapi = require('hapi');
-const Path = require('path')
+const Path = require('path');
+const Inert = require('inert');
 
-const server = new Hapi.Server();
+const server = new Hapi.Server({
+    connections: {
+        routes: {
+            files: {
+                relativeTo: Path.join(__dirname, 'public')
+            }
+        }
+    }
+});
+
+server.log(['error', 'database', 'read']);
 
 server.connection({
 	host: "localhost",
@@ -30,6 +41,20 @@ server.route({
 		reply.view('home');
 	}
 })
+
+server.register(Inert, () => {});
+
+server.route({
+    method: 'GET',
+    path: '/{param*}',
+    handler: {
+        directory: {
+            path: '.',
+            redirectToSlash: true,
+            index: true
+        }
+    }
+});
 
 server.start((err)=>{
 	if(err){
