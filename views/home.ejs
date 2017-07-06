@@ -1,26 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="max-width: 100%;">
 
 <head>
 	<title><%= title %></title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="css/style.css" rel="stylesheet">
 	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 </head>
 
-<body>
-	<nav class="navbar navbar-default navbar-fixed-top" style="margin-bottom:0px">
-		<div class="container-fluid">
+<body class="flex flex-column">
+	<nav class="navbar navbar-default navbar-fixed-top flex" style="margin-bottom:0px">
+		<div class="container-fluid flex">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>                        
 				</button>
-				<a class="navbar-brand" href="/">Pens Gate</a>
+				<a class="navbar-brand" href="/"><img src="/images/logo_edit.png" alt="Logo" style="height: 100%"></a>
 			</div>
 			<div class="collapse navbar-collapse" id="myNavbar">
 				<ul class="nav navbar-nav">
@@ -42,8 +42,17 @@
 			</div>
 		</div>
 	</nav>
-	<img src="/images/main.jpg" alt="main.jpg" width="100%" class="img_darken">
-	<div class="container-fluid">
+	<img src="/images/main.jpg" alt="main.jpg" width="100%" class="darken-image">
+	<div class="container flex flex-1 full-width">
+		<div class="col-sm-6 text-center flex flex-1 h-align-space wrap flex-column">
+			<h2 class="full-width">Photography</h2>
+			<!--<div class="flex flex-row full-width">
+				<span class="flex flex-1"></span>
+				<img src="/images/shooting.jpg" alt="Photoshooting" style="background-size: contain" class="flex-2"><br>
+				<span class="flex flex-1"></span>
+			</div>-->
+			<p>Duis velit eu officia dolore et nostrud dolore mollit voluptate magna excepteur amet pariatur. Lorem velit esse sint eu mollit mollit anim esse irure do excepteur occaecat incididunt. Eiusmod deserunt elit veniam veniam labore. Labore dolore in fugiat ad fugiat. Ullamco aute sit ex ex qui fugiat nulla consectetur cupidatat est enim dolore proident adipisicing. Minim amet in ad sit quis dolor dolor id. Ut aliquip ut sint velit minim.</p>
+		</div>
 	</div>
 </body>
 <script>
