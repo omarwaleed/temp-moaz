@@ -9,10 +9,23 @@
 }
 
 ul.nav {
-	margin-left: 20px;
+	margin-left: 36%;
+	/*text-align: center;*/
 }
 
-.navbar-fixed-top{
+.navbar-default .navbar-nav>li>a {
+	color: #ccc;
+}
+
+.navbar-default:hover .navbar-nav>li>a:hover {
+	color: #eee;
+}
+
+.navbar-default.scrolled .navbar-nav>li>a.scrolled {
+	color: #333;
+}
+
+.navbar-fixed-top {
 	background-color: transparent !important;
 	color: #fff;
 	border: 0px solid transparent;
@@ -23,6 +36,18 @@ ul.nav {
   background-color: #fff !important;
   color: #efefef;
   transition: background-color 500ms linear;
+}
+
+.other-bg {
+	background: #efefef
+}
+
+.distance {
+	padding: 80px 0px;
+}
+
+.half-distance {
+	padding: 50px 0px;
 }
 
 .flex {
