@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" style="max-width: 100%;">
+<html lang="en">
 
 <head>
 	<title><%= title %></title>
@@ -11,9 +11,9 @@
 	<script src="js/bootstrap.min.js"></script>
 </head>
 
-<body class="flex flex-column">
-	<nav class="navbar navbar-default navbar-fixed-top flex" style="margin-bottom:0px">
-		<div class="container-fluid flex">
+<body>
+	<nav class="navbar navbar-default navbar-fixed-top" style="margin-bottom:0px; top: 0;">
+		<div class="container-fluid">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
 					<span class="icon-bar"></span>
@@ -43,22 +43,58 @@
 		</div>
 	</nav>
 	<img src="/images/main.jpg" alt="main.jpg" width="100%" class="darken-image">
-	<div class="container flex flex-1 full-width">
-		<div class="col-sm-6 text-center flex flex-1 h-align-space wrap flex-column">
-			<h2 class="full-width">Photography</h2>
-			<!--<div class="flex flex-row full-width">
-				<span class="flex flex-1"></span>
-				<img src="/images/shooting.jpg" alt="Photoshooting" style="background-size: contain" class="flex-2"><br>
-				<span class="flex flex-1"></span>
-			</div>-->
-			<p>Duis velit eu officia dolore et nostrud dolore mollit voluptate magna excepteur amet pariatur. Lorem velit esse sint eu mollit mollit anim esse irure do excepteur occaecat incididunt. Eiusmod deserunt elit veniam veniam labore. Labore dolore in fugiat ad fugiat. Ullamco aute sit ex ex qui fugiat nulla consectetur cupidatat est enim dolore proident adipisicing. Minim amet in ad sit quis dolor dolor id. Ut aliquip ut sint velit minim.</p>
+	<div class="distance">
+		<div class="container">
+			<div class="text-center" style="float: none; margin: 0 auto;">
+				<h2 class="col-sm-12"><a href="/services/photography">Photography</a></h2>
+				<div class="col-sm-12 half-distance">
+					<div class="col-sm-6 col-sm-offset-3">
+						<img src="/images/shooting.jpg" alt="Photoshooting" style="height: 100%; width: 100%"><br>
+					</div>
+				</div>
+				<p>Duis velit eu officia dolore et nostrud dolore mollit voluptate magna excepteur amet pariatur. Lorem velit esse sint eu mollit mollit anim esse irure do excepteur occaecat incididunt. Eiusmod deserunt elit veniam veniam labore. Labore dolore in fugiat ad fugiat. Ullamco aute sit ex ex qui fugiat nulla consectetur cupidatat est enim dolore proident adipisicing. Minim amet in ad sit quis dolor dolor id. Ut aliquip ut sint velit minim.</p>
+			</div>
 		</div>
 	</div>
+	<div class="distance other-bg">
+		<div class="container">
+			<div class="text-center" style="float: none; margin: 0 auto;">
+				<h2 class="col-sm-12"><a href="/services/priting">Printing</a></h2>
+				<div class="col-sm-12 half-distance">
+					<div class="col-sm-6 col-sm-offset-3">
+						<img src="/images/print-selection.jpg" alt="print selection" style="height: 100%; width: 100%;"><br>
+					</div>
+				</div>
+				<p>Duis velit eu officia dolore et nostrud dolore mollit voluptate magna excepteur amet pariatur. Lorem velit esse sint eu mollit mollit anim esse irure do excepteur occaecat incididunt. Eiusmod deserunt elit veniam veniam labore. Labore dolore in fugiat ad fugiat. Ullamco aute sit ex ex qui fugiat nulla consectetur cupidatat est enim dolore proident adipisicing. Minim amet in ad sit quis dolor dolor id. Ut aliquip ut sint velit minim.</p>
+			</div>
+		</div>
+	</div>
+	<div class="distance">
+		<div class="container">
+			<div class="text-center" style="float: none; margin: 0 auto;">
+				<h2 class="col-sm-12"><a href="/services/video">Video</a></h2>
+				<div class="col-sm-12 half-distance">
+					<div class="col-sm-6 col-sm-offset-3">
+						<img src="/images/efficientvideo.jpg" alt="Video" style="height: 100%; width: 100%"><br>
+					</div>
+				</div>
+				<p>Duis velit eu officia dolore et nostrud dolore mollit voluptate magna excepteur amet pariatur. Lorem velit esse sint eu mollit mollit anim esse irure do excepteur occaecat incididunt. Eiusmod deserunt elit veniam veniam labore. Labore dolore in fugiat ad fugiat. Ullamco aute sit ex ex qui fugiat nulla consectetur cupidatat est enim dolore proident adipisicing. Minim amet in ad sit quis dolor dolor id. Ut aliquip ut sint velit minim.</p>
+			</div>
+		</div>
+	</div>
+
+	<footer style="bottom: 0;">
+		
+	</footer>
 </body>
 <script>
 	$(function () {
 		$(document).scroll(function () {
 			var $nav = $(".navbar-fixed-top");
+			$nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+			$nav = $(".navbar-default");
+			$nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+			$nav = $(".navbar-nav>li>a");
 			$nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
 		});
 	});
