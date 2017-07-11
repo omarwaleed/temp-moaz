@@ -15,10 +15,16 @@ ul.nav {
 
 .navbar-default .navbar-nav>li>a {
 	color: #ccc;
+	border-radius: 3px;
 }
 
 .navbar-default:hover .navbar-nav>li>a:hover {
 	color: #eee;
+	border-radius: 3px;
+}
+
+.navbar-default:active .navbar-nav>li>a:active {
+	color: #222;
 }
 
 .navbar-default.scrolled .navbar-nav>li>a.scrolled {
@@ -36,6 +42,26 @@ ul.nav {
   background-color: #fff !important;
   color: #efefef;
   transition: background-color 500ms linear;
+}
+
+.carousel-inner> .item > a >img {
+	width: 100%;
+}
+
+.counter-styler {
+	font-size: 30px;
+	font-weight: bold;
+}
+
+.counter-after {
+	font-size: 25px;
+}
+
+footer {
+	bottom: 0;
+	background: #222;
+	color:azure;
+	padding: 40px 60px;
 }
 
 .other-bg {
