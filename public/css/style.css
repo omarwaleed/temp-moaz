@@ -58,6 +58,10 @@ ul.nav {
 	font-size: 25px;
 }
 
+.main-content {
+	padding: 100px 40px 0px 40px;
+}
+
 .capitalize {
 	text-transform: capitalize;
 }
