@@ -1,3 +1,13 @@
+@font-face{
+  font-family: "Zilla";
+  src: url("../fonts/Zila_Slab/ZillaSlab-Medium.ttf") format("truetype");
+}
+
+@font-face{
+  font-family: "Lato";
+  src: url("../fonts/Lato/Lato-Light.ttf") format("truetype");
+}
+
 .remove-extras {
 	padding: 0px;
 	margin: 0px;
@@ -52,14 +62,23 @@ ul.nav {
 .counter-styler {
 	font-size: 30px;
 	font-weight: bold;
+	font-family: 'Lato';
 }
 
 .counter-after {
 	font-size: 25px;
+	font-family: 'Lato';
+	font-weight: bold;
 }
 
 .main-content {
 	padding: 100px 40px 0px 40px;
+}
+
+.main-content > h2 {
+	font-family: 'Lato';
+	font-weight: bold;
+	padding-bottom: 25px;
 }
 
 .capitalize {
