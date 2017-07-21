@@ -85,6 +85,11 @@ ul.nav {
 	text-transform: capitalize;
 }
 
+.whiten-bg {
+	background: #fff;
+	border-radius: 2px;
+}
+
 footer {
 	bottom: 0;
 	background: #222;
