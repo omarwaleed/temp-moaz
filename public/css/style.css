@@ -90,6 +90,14 @@ ul.nav {
 	border-radius: 2px;
 }
 
+.nav-push-down {
+	padding-top: 8px;
+}
+
+.dark-text {
+	color: #222;
+}
+
 footer {
 	bottom: 0;
 	background: #222;
