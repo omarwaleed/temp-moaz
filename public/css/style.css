@@ -24,7 +24,8 @@ ul.nav {
 }
 
 .navbar-default .navbar-nav>li>a {
-	color: #ccc;
+	/* color: #ccc; */
+	color: #333;
 	border-radius: 3px;
 }
 
@@ -42,17 +43,18 @@ ul.nav {
 }
 
 .navbar-fixed-top {
-	background-color: transparent !important;
-	color: #fff;
+	/* background-color: transparent !important; */
+	background-color: #fff !important;
+	/* color: #fff; */
 	border: 0px solid transparent;
 	border-color: transparent;
 }
 
-.navbar-fixed-top.scrolled {
+/* .navbar-fixed-top.scrolled {
   background-color: #fff !important;
   color: #efefef;
   transition: background-color 500ms linear;
-}
+} */
 
 .carousel-inner> .item > a >img {
 	width: 100%;
