@@ -46,6 +46,113 @@
 		</div>
 	</nav>
 	<img src="/images/kursus-editing-video.jpg" alt="Up Image" style="width: 100%">
+	<div class="about-outer">
+		<div class="other-bg">
+			<div>
+				<h2>Introduction</h2>
+				<p>Pens Gate is a framework made up of art professionals, technicians, developer and copyrighters working together to provide
+					you an incredibly valuable work you exactly need; creative designs, Promotional Print Advertising, Brand Creation, Complete
+					advertising campaigns and a lot of other services that associated to the artistic design studio works. We offer over
+					10 years of experience handling a variety of clients, in a variety of industries all across the country.</p>
+			</div>
+		</div>
+		<div>
+			<div>
+				<h2>Who We Are</h2>
+				<p>We are Deep Adverting, a specialized advertising & design agency currently working on the RGB & CMYK worlds. We're located
+					in Cairo. We deep was founded in 2010 by Moaz Mohamed.</p>
+			</div>
+		</div>
+		<div class="other-bg">
+			<div>
+				<h2>Why Choose Us</h2>
+				<p>The advantages of working with us is our expertise in working with different tools and also, our almost 7 years of experience
+					in the design market.</p>
+			</div>
+		</div>
+		<div>
+			<div>
+				<h2>OUR MISSION & VISION</h2>
+				<p>To be one of the best Advertising agency in Egypt and World , thereby achieving highest standards of Quality, Reliability,
+					Trust, Customer Satisfaction and maximization of Shareholder Value.</p>
+			</div>
+		</div>
+		<div class="other-bg">
+			<div>
+				<h2>Our team</h2>
+				<p>Moaz Mohamed shehata CO and Funder. Gradated GUC applied arts. </p>
+			</div>
+		</div>
+		<div>
+			<div>
+				<h2>Objective</h2>
+				<p>Seeking a challenging position in the field of Communication or advertising and promotion.</p>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<div class="container-fluid text-center">
+			<div class="col-sm-3">
+				<h4>Contact Us</h4>
+				<p>Email: pensgate@hotmail.com - moaz_m40@hotmail.com</p>
+				<p><a href="mailto:moaz_m40@hotmail.com">Send us an email</a></p>
+				<p>Mobile: (+2) 01001367093</p>
+				<hr>
+				<!-- <h4>Address</h4> -->
+				<!-- <p>221B Baker Street, London, UK</p> -->
+			</div>
+			<div class="col-sm-5">
+				<h4>Services</h4>
+				<p><a href="/service/photography">Photography</a></p>
+				<p><a href="/service/graphicdesign">Graphic Design</a></p>
+				<p><a href="/service/audiovideo">Audio/Video</a></p>
+				<p><a href="/service/printing">Printing</a></p>
+			</div>
+			<div class="col-sm-4" style="padding: 20px;">
+				Find us on <a href="https://www.facebook.com/pensgate/"><img src="/images/facebook.png" alt="facebook" height="20px" style="border-radius: 2px;"></a>
+				<a href="https://www.youtube.com/channel/UC4FulWKH8iveAqQm2dDF91Q"><img src="/images/youtube.png" alt="youtube" height="20px"></a>
+				<div class="footer-big-links">
+					<p><a href="/portfolio">Portfolio</a></p>
+					<p><a href="/about">About</a></p>
+					<p><a href="/contact">Contact Us</a></p>
+				</div>
+				<div style="padding-top: 100px;">
+					<div>Copy Rights 2017</div>
+					<div>Made by <a href="http://www.omarwaleed.com">Omar Waleed</a></div>
+				</div>
+			</div>
+		</div>
+	</footer>
 </body>
+
+<script>
+	jQuery(document).ready(function($){
+		// browser window scroll (in pixels) after which the "back to top" link is shown
+		var offset = 300,
+			//browser window scroll (in pixels) after which the "back to top" link opacity is reduced
+			offset_opacity = 1200,
+			//duration of the top scrolling animation (in ms)
+			scroll_top_duration = 700,
+			//grab the "back to top" link
+			$back_to_top = $('.cd-top');
+
+		//hide or show the "back to top" link
+		$(window).scroll(function(){
+			( $(this).scrollTop() > offset ) ? $back_to_top.addClass('cd-is-visible') : $back_to_top.removeClass('cd-is-visible cd-fade-out');
+			if( $(this).scrollTop() > offset_opacity ) { 
+				$back_to_top.addClass('cd-fade-out');
+			}
+		});
+
+		//smooth scroll to top
+		$back_to_top.on('click', function(event){
+			event.preventDefault();
+			$('body,html').animate({
+				scrollTop: 0 ,
+				}, scroll_top_duration
+			);
+		});
+	});
+</script>
 
 </html>

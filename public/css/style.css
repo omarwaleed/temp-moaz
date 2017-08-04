@@ -58,7 +58,9 @@ ul.nav {
 
 .carousel-inner> .item > a >img {
 	width: 100%;
-	height: 550px;
+	/* height: 550px; */
+	min-height: 350px;
+	max-height: 700px;
 }
 
 .counter-styler {
@@ -113,6 +115,10 @@ footer {
 	padding: 40px 60px;
 }
 
+.footer-big-links {
+	padding-top: 20px;
+}
+
 .other-bg {
 	background: #efefef
 }
@@ -139,7 +145,7 @@ footer {
   text-indent: 100%;
   white-space: nowrap;
   /* background: rgba(232, 98, 86, 0.8) url(https://codyhouse.co/demo/back-to-top/img/cd-top-arrow.svg) no-repeat center 50%; */
-  background: #337ab7 url(../images/cd-top-arrow.svg) no-repeat center 50%;
+  background: #337ab7 url(../images/content/cd-top-arrow.svg) no-repeat center 50%;
   visibility: hidden;
   opacity: 0;
   -webkit-transition: all 0.3s;
@@ -158,6 +164,26 @@ footer {
 .no-touch .cd-top:hover {
   background-color: #e86256;
   opacity: 1;
+}
+
+.about-outer > div > div{
+	padding: 45px 0px;
+	width: 70%;
+	margin: 0px auto;
+}
+
+.about-outer > div > div > h2 {
+	font-size: 40px;
+	font: 'Zilla';
+	font-weight: bold;
+	text-align: center;
+}
+
+.about-outer > div > div > p {
+	font-size: 20px;
+	font: 'Lato';
+	padding: 25px 20px;
+	text-align: center;
 }
 
 .flex {

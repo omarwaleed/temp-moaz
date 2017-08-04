@@ -5,14 +5,15 @@
 	<title>Pens Gate: <%= title %></title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="../css/bootstrap.min.css" rel="stylesheet">
-	<link href="../css/style.css" rel="stylesheet">
-	<script src="../js/jquery.min.js"></script>
-	<script src="../js/bootstrap.min.js"></script>
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/css/style.css" rel="stylesheet">
+	<script src="/js/jquery.min.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
+	<script src="/js/slick.min.js"></script>
 </head>
 
 <body>
-	<nav class="navbar navbar-default navbar-fixed-top" style="margin-bottom:0px; top: 0;">
+	<nav class="navbar navbar-default navbar-fixed-top" style="margin-bottom:0px; top: 0;" id="mynavbar">
 		<div class="container-fluid">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -20,20 +21,23 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>                        
 				</button>
-				<a class="navbar-brand" href="/"><img src="/images/logo_edit.png" alt="Logo" style="height: 100%"></a>
+				<!-- <a class="navbar-brand" href="/"><img src="/images/logo_edit.png" alt="Logo" style="height: 100%"></a>  -->
 			</div>
 			<div class="collapse navbar-collapse" id="myNavbar">
 				<ul class="nav navbar-nav">
-					<li class="dropdown">
-						<a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
+					<li class="dropdown nav-push-down">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#">Services <span class="caret"></span></a>
 						<ul class="dropdown-menu">
-							<li><a href="#">Page 1-1</a></li>
-							<li><a href="#">Page 1-2</a></li>
-							<li><a href="#">Page 1-3</a></li>
+							<li><a href="#photography">Photography</a></li>
+							<li><a href="#graphic-design">Graphic Design</a></li>
+							<li><a href="#digital-marketing">Digital Marketing</a></li>
+							<li><a href="#audio-video">Audio/Video</a></li>
 						</ul>
 					</li>
-					<li><a href="#">Page 2</a></li>
-					<li><a href="#">Page 3</a></li>
+					<li class="nav-push-down"><a href="/portfolio">Portfolio</a></li>
+					<li class="whiten-bg"><a href="/"><img src="/images/logo_edit.png" alt="Logo" style="height: 40px;"></a></li>
+					<li class="nav-push-down"><a href="/about">About</a></li>
+					<li class="nav-push-down"><a href="/contact">Contact Us</a></li>
 				</ul>
 				<!--<ul class="nav navbar-nav navbar-right">
 					<li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
@@ -42,6 +46,8 @@
 			</div>
 		</div>
 	</nav>
+	<!-- <span class="gototop"><a href="#mynavbar">Go To Top</a></span> -->
+	<a href="#0" class="cd-top">Top</a>
 	<div class="container text-center">
 		<!-- <img src="/images/photography" alt="Photography">  -->
 		<h1 class="capitalize"><%= title %></h1>
@@ -50,6 +56,72 @@
 			<p>Our photography service contains all you will ever need. You can find all the best in one place and it's called Pens Gate</p>
 		</div>
 	</div>
+
+
+
+	<footer>
+		<div class="container-fluid text-center">
+			<div class="col-sm-3">
+				<h4>Contact Us</h4>
+				<p>Email: pensgate@hotmail.com - moaz_m40@hotmail.com</p>
+				<p><a href="mailto:moaz_m40@hotmail.com">Send us an email</a></p>
+				<p>Mobile: (+2) 01001367093</p>
+				<hr>
+				<!-- <h4>Address</h4> -->
+				<!-- <p>221B Baker Street, London, UK</p> -->
+			</div>
+			<div class="col-sm-5">
+				<h4>Services</h4>
+				<p><a href="/service/photography">Photography</a></p>
+				<p><a href="/service/graphicdesign">Graphic Design</a></p>
+				<p><a href="/service/audiovideo">Audio/Video</a></p>
+				<p><a href="/service/printing">Printing</a></p>
+			</div>
+			<div class="col-sm-4" style="padding: 20px;">
+				Find us on <a href="https://www.facebook.com/pensgate/"><img src="/images/facebook.png" alt="facebook" height="20px" style="border-radius: 2px;"></a>
+				<a href="https://www.youtube.com/channel/UC4FulWKH8iveAqQm2dDF91Q"><img src="/images/youtube.png" alt="youtube" height="20px"></a>
+				<div class="footer-big-links">
+					<p><a href="/portfolio">Portfolio</a></p>
+					<p><a href="/about">About</a></p>
+					<p><a href="/contact">Contact Us</a></p>
+				</div>
+				<div style="padding-top: 100px;">
+					<div>Copy Rights 2017</div>
+					<div>Made by <a href="http://www.omarwaleed.com">Omar Waleed</a></div>
+				</div>
+			</div>
+		</div>
+	</footer>
 </body>
+
+<script>
+	jQuery(document).ready(function($){
+		// browser window scroll (in pixels) after which the "back to top" link is shown
+		var offset = 300,
+			//browser window scroll (in pixels) after which the "back to top" link opacity is reduced
+			offset_opacity = 1200,
+			//duration of the top scrolling animation (in ms)
+			scroll_top_duration = 700,
+			//grab the "back to top" link
+			$back_to_top = $('.cd-top');
+
+		//hide or show the "back to top" link
+		$(window).scroll(function(){
+			( $(this).scrollTop() > offset ) ? $back_to_top.addClass('cd-is-visible') : $back_to_top.removeClass('cd-is-visible cd-fade-out');
+			if( $(this).scrollTop() > offset_opacity ) { 
+				$back_to_top.addClass('cd-fade-out');
+			}
+		});
+
+		//smooth scroll to top
+		$back_to_top.on('click', function(event){
+			event.preventDefault();
+			$('body,html').animate({
+				scrollTop: 0 ,
+				}, scroll_top_duration
+			);
+		});
+	});
+</script>
 
 </html>
