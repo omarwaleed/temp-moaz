@@ -20,7 +20,7 @@ router.get('/about', function(req, res){
 	res.render('about');
 });
 
-router.get('/service/:name', function (req, res) {
+router.get('/services/:name', function (req, res) {
 	res.render(('service_'+req.params.name), {
 		title: req.params.name
 	})

@@ -186,6 +186,10 @@ footer {
 	text-align: center;
 }
 
+.photo-service-content {
+	display: none;
+}
+
 .flex {
 	display: flex;
 }
